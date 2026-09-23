@@ -79,6 +79,15 @@ tasks:
       tags:
         - node
 
+  prepare:
+    desc: install dependencies, git hooks, and build
+    cmd: ./prepare.sh
+    spec:
+      parallel: true
+    target:
+      tags:
+        - node
+
   node-build-all:
     desc: yarn build
     cmd: yarn build
