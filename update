@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"
+
+gitr pull
+yr install
+yr build

@@ -1,0 +1,21 @@
+.DS_Store
+memory-injection-test.js
+sample-radio-memory.bin
+test-memory-decode.js
+test-radio-memory.js
+test-ui-integration.js
+ui-integration-test.json
+
+# mani #
+ham-radio-api
+ham-radio-docs
+ham-radio-driver
+ham-radio-registry
+ham-radio-sniffer
+ham-radio-ui
+ham-radio-utils
+radio-module-baofeng
+radio-module-catalog
+radio-module-kenwood
+renovate
+# mani #

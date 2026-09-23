@@ -1,0 +1,97 @@
+projects:
+  ham-radio-api:
+    path: ham-radio-api
+    url: https://github.com/springfield-ham-radio/ham-radio-api.git
+    tags:
+      - node
+
+  ham-radio-utils:
+    path: ham-radio-utils
+    url: https://github.com/springfield-ham-radio/ham-radio-utils.git
+    tags:
+      - node
+
+  ham-radio-driver:
+    path: ham-radio-driver
+    url: https://github.com/springfield-ham-radio/ham-radio-driver.git
+    tags:
+      - node
+
+  ham-radio-registry:
+    path: ham-radio-registry
+    url: https://github.com/springfield-ham-radio/ham-radio-registry.git
+    tags:
+      - node
+
+  ham-radio-ui:
+    path: ham-radio-ui
+    url: https://github.com/springfield-ham-radio/ham-radio-ui.git
+    tags:
+      - node
+
+  ham-radio-docs:
+    path: ham-radio-docs
+    url: https://github.com/springfield-ham-radio/ham-radio-docs.git
+    tags:
+      - node
+
+  ham-radio-sniffer:
+    path: ham-radio-sniffer
+    url: https://github.com/springfield-ham-radio/ham-radio-sniffer.git
+    tags:
+      - node
+
+  radio-module-baofeng:
+    path: radio-module-baofeng
+    url: https://github.com/springfield-ham-radio/radio-module-baofeng.git
+    tags:
+      - node
+
+  radio-module-kenwood:
+    path: radio-module-kenwood
+    url: https://github.com/springfield-ham-radio/radio-module-kenwood.git
+    tags:
+      - node
+
+  radio-module-catalog:
+    path: radio-module-catalog
+    url: https://github.com/springfield-ham-radio/radio-module-catalog.git
+
+  renovate:
+    path: renovate
+    url: https://gitlab.com/springfield-ham-radio/ops/renovate.git
+
+tasks:
+  update-all:
+    desc: git pull
+    cmd: git pull
+    spec:
+      parallel: true
+    target:
+      all: true
+
+  node-install-all:
+    desc: yarn install
+    cmd: yarn install
+    spec:
+      parallel: true
+    target:
+      tags:
+        - node
+
+  node-build-all:
+    desc: yarn build
+    cmd: yarn build
+    spec:
+      parallel: true
+    target:
+      tags:
+        - node
+
+  prune-local-branches:
+    desc: git prune
+    cmd: git branch --merged | grep -v "\*" | xargs git branch -d
+    spec:
+      parallel: true
+    target:
+      all: true
