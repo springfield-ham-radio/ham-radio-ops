@@ -1,0 +1,8 @@
+---
+description: 'Pause when an @springfield dependency source changes'
+alwaysApply: true
+---
+
+# Dependencies
+
+If the source for a dependency with the `@springfield` scope changes, pause until that project is pushed to GitLab and its CI/CD pipeline has run. After the pipeline finishes, update the dependency and continue.
