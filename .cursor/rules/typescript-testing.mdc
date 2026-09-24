@@ -5,9 +5,5 @@ globs: *.ts
 
 # TypeScript testing
 
-- Use the Node.js test runner with `describe` and `it` from `node:test`.
-- Use chai `expect` for assertions.
 - `yarn test`, `yarn test:unit`, `yarn test:integration`, and `yarn test:e2e` run that suite when it exists. Those commands do not accept extra arguments.
-- Run one file or a name pattern with `tsx` and the Node test runner, for example `tsx --test test/unit/services/user-service.test.ts`.
-- Mock HTTP with `nock`.
 - Build test data with `fishery.Factory`.
