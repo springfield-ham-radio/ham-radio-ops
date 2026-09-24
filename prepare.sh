@@ -27,5 +27,6 @@ if [ "$missing" -ne 0 ]; then
   exit 1
 fi
 
-mani sync
+# Sibling clones live outside this repo; do not write them into .gitignore.
+mani sync --sync-gitignore=false
 mani run prepare
