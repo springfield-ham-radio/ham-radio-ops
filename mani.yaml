@@ -57,10 +57,6 @@ projects:
     path: ../radio-module-catalog
     url: https://github.com/springfield-ham-radio/radio-module-catalog.git
 
-  renovate:
-    path: ../renovate
-    url: https://gitlab.com/springfield-ham-radio/ops/renovate.git
-
 tasks:
   update-all:
     desc: git pull
