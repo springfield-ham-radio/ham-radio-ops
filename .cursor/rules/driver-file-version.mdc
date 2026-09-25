@@ -6,15 +6,17 @@ alwaysApply: false
 
 # Driver file version
 
-Each `configs/*.json` file owns a top-level `"version"` (`major.minor.patch`). That value is independent of `package.json` and of every other config in the module.
+Each `configs/*.json` file owns a top-level `"version"` (`major.minor.patch`). That value is the radio driver version HamBench shows for an installed radio. It is independent of `package.json` (the module zip) and of every other config in the module.
 
 ## When editing a driver
 
-- Change only the files whose protocol, CAT, serial, memory, or capabilities actually change.
-- Bump `"version"` in each changed file in the same edit.
+- Bump `"version"` in the same edit whenever that driver changes.
+- A driver is the config plus every relative `$ref` it uses (schemas and memory maps).
+- A shared schema change bumps every config that references it.
 - Leave unchanged sibling configs, and their versions, untouched.
 - Do not copy the module or `package.json` version onto configs.
-- Do not run `stamp-config-versions` or otherwise rewrite every config to one version.
+
+From the radio module root, `node scripts/check-driver-versions.mjs` fails when a driver file changed without a higher version. CI runs it against the base revision.
 
 ## How to bump
 
