@@ -1,0 +1,17 @@
+---
+description: Deliver a reusable prompt in one copyable code block
+alwaysApply: true
+---
+
+# Prompt text box
+
+When the user asks for a prompt to paste into a new chat, agent, or other tool, put that prompt in one fenced code block.
+
+- The block contains only the prompt. No title, preamble, or commentary inside the fence.
+- Use a `text` fence so the copy button copies the prompt alone.
+- Keep any explanation outside the fence, and keep it short.
+- One prompt, one block. Do not split the prompt across several fences.
+
+```text
+Rewrite the sniffer in Rust. Follow ADR 0001.
+```
