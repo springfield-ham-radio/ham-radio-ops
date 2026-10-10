@@ -38,6 +38,8 @@ projects:
   ham-radio-sniffer:
     path: ../ham-radio-sniffer
     url: https://github.com/springfield-ham-radio/ham-radio-sniffer.git
+    tags:
+      - rust
 
   radio-module-baofeng:
     path: ../radio-module-baofeng
@@ -81,6 +83,7 @@ tasks:
     target:
       tags:
         - node
+        - rust
 
   node-build-all:
     desc: yarn build
