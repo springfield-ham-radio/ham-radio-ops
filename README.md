@@ -32,7 +32,7 @@ mani sync --sync-gitignore=false
 ./prepare.sh
 ```
 
-`./prepare.sh` checks for `node` and `cargo`, syncs the mani projects without writing them into `.gitignore`, then runs `mani run prepare` (each Node project's own `./prepare.sh`).
+`./prepare.sh` checks for `node` and `cargo`, syncs the mani projects without writing them into `.gitignore`, then runs `mani run prepare` (each Node or Rust project's own `./prepare.sh`).
 
 Without mani, clone the siblings next to this repo:
 
@@ -52,7 +52,7 @@ git clone https://github.com/springfield-ham-radio/.github.git
 
 ## Files
 
-- `mani.yaml` — project list (URLs, sibling paths, `node` tags) and tasks: `update-all` (`git pull`), `node-install-all` (`yarn install`), `prepare` (`./prepare.sh` in each Node project), `node-build-all` (`yarn build`), `prune-local-branches` (delete merged local branches). `ham-radio-sniffer` and `radio-module-catalog` have no `node` tag. Tasks marked parallel run across their targets at once.
+- `mani.yaml` — project list (URLs, sibling paths, `node` tags, and a `rust` tag on ham-radio-sniffer) and tasks: `update-all` (`git pull`), `node-install-all` (`yarn install`), `prepare` (`./prepare.sh` in each `node` or `rust` project), `node-build-all` (`yarn build`), `prune-local-branches` (delete merged local branches). `radio-module-catalog` has no tag. Tasks marked parallel run across their targets at once.
 - `prepare.sh` — toolchain check, then `mani sync` and `mani run prepare`.
 - `update` — runs `gitr pull`, `yr install`, and `yr build`.
 - `.gitignore` — ignores `.DS_Store` and local memory/UI scratch files. Sibling clones stay outside this repo.
