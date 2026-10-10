@@ -38,8 +38,6 @@ projects:
   ham-radio-sniffer:
     path: ../ham-radio-sniffer
     url: https://github.com/springfield-ham-radio/ham-radio-sniffer.git
-    tags:
-      - node
 
   radio-module-baofeng:
     path: ../radio-module-baofeng
